@@ -37,9 +37,7 @@ RUN mv -f $APP_ROOT/config/app.sh $APP_ROOT/src/app.sh && \
 	chmod ug+x $APP_ROOT/src/app.sh && \
   chown -R 1001:0 ${APP_ROOT} && \
   fix-permissions ${APP_ROOT} && \
-  chmod -R a+x $STI_SCRIPTS_PATH/ && \
-  cd   $APP_ROOT/src/ckanext-noregistration  && \
-  python setup.py install  
+  chmod -R a+x $STI_SCRIPTS_PATH/ 
 
 USER 1001
 

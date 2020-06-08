@@ -31,7 +31,7 @@ COPY ./root/ /
 COPY ./config $APP_ROOT/config
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 #RUN mkdir $APP_ROOT/src/ckanext-noregistration
-RUN mv -f ./ckanext-noregistration $APP_ROOT/src/
+#RUN mv -f ./ckanext-noregistration $APP_ROOT/src/
 
 # move and remake permissions for the newly added files
 RUN mv -f $APP_ROOT/config/app.sh $APP_ROOT/src/app.sh && \
@@ -39,6 +39,9 @@ RUN mv -f $APP_ROOT/config/app.sh $APP_ROOT/src/app.sh && \
   chown -R 1001:0 ${APP_ROOT} && \
   fix-permissions ${APP_ROOT} && \
   chmod -R a+x $STI_SCRIPTS_PATH/ 
+  
+RUN cd $APP_ROOT/src/ckanext-noregistration && \
+    python setup.py install
 
 USER 1001
 

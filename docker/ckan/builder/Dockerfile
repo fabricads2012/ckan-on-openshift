@@ -40,8 +40,8 @@ RUN mv -f $APP_ROOT/config/app.sh $APP_ROOT/src/app.sh && \
   fix-permissions ${APP_ROOT} && \
   chmod -R a+x $STI_SCRIPTS_PATH/ 
   
-RUN cd $APP_ROOT/src/ckanext-noregistration && \
-    python setup.py install
+#RUN cd $APP_ROOT/src/ckanext-noregistration && \
+#    python setup.py install
 
 USER 1001
 

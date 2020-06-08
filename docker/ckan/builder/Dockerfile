@@ -23,18 +23,23 @@ RUN INSTALL_PKGS="libxml2-devel libxslt-devel openssl-devel libffi-devel git" &&
 	yum -y --setopt=tsflags=nodocs install --enablerepo=epel geos-devel && \
 	rpm -V geos-devel && \
 	yum -y clean all --enablerepo='*'
+	
+RUN git clone "https://github.com/ogdch/ckanext-noregistration.git#egg=ckanext-noregistration"
 
 # using base container env vars
 COPY ./root/ /
 COPY ./config $APP_ROOT/config
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
+COPY ./ckanext-noregistration $APP_ROOT/src/
 
 # move and remake permissions for the newly added files
 RUN mv -f $APP_ROOT/config/app.sh $APP_ROOT/src/app.sh && \
 	chmod ug+x $APP_ROOT/src/app.sh && \
   chown -R 1001:0 ${APP_ROOT} && \
   fix-permissions ${APP_ROOT} && \
-  chmod -R a+x $STI_SCRIPTS_PATH/
+  chmod -R a+x $STI_SCRIPTS_PATH/ && \
+  cd   $APP_ROOT/src/ckanext-noregistration  && \
+  python setup.py install  
 
 USER 1001
 

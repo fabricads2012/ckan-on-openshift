@@ -30,7 +30,8 @@ RUN git clone "https://github.com/ogdch/ckanext-noregistration.git"
 COPY ./root/ /
 COPY ./config $APP_ROOT/config
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
-COPY ./ckanext-noregistration $APP_ROOT/src/
+RUN mkdir $APP_ROOT/src/ckanext-noregistration
+COPY ./ckanext-noregistration $APP_ROOT/src/ckanext-noregistration
 
 # move and remake permissions for the newly added files
 RUN mv -f $APP_ROOT/config/app.sh $APP_ROOT/src/app.sh && \

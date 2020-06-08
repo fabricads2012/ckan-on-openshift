@@ -24,7 +24,7 @@ RUN INSTALL_PKGS="libxml2-devel libxslt-devel openssl-devel libffi-devel git" &&
 	rpm -V geos-devel && \
 	yum -y clean all --enablerepo='*'
 	
-RUN git clone "https://github.com/ogdch/ckanext-noregistration.git#egg=ckanext-noregistration"
+RUN git clone "https://github.com/ogdch/ckanext-noregistration.git"
 
 # using base container env vars
 COPY ./root/ /

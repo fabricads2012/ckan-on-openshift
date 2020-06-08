@@ -31,7 +31,7 @@ COPY ./root/ /
 COPY ./config $APP_ROOT/config
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 #RUN mkdir $APP_ROOT/src/ckanext-noregistration
-RUN mv -f ./ckanext-noregistration $APP_ROOT/src/ckanext-noregistration
+RUN mv -f ./ckanext-noregistration $APP_ROOT/src/
 
 # move and remake permissions for the newly added files
 RUN mv -f $APP_ROOT/config/app.sh $APP_ROOT/src/app.sh && \

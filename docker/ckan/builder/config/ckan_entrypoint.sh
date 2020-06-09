@@ -121,6 +121,9 @@ if [ -n "$CKAN_DO_DB_INIT" ] && [ "$CKAN_DO_DB_INIT" = "true" ]; then
 fi
 
 
+source $APP_ROOT/src/ckanext-noregistration 
+cd $APP_ROOT/src/ckanext-noregistration
+python setup.py install
 
 echo "---> CKAN will be started with the configuration below:"
 cat "$CONFIG"

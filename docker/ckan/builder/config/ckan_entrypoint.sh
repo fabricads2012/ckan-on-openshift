@@ -39,7 +39,7 @@ if [ -s "$CKAN_CONF_TEMPLATES/who.ini" ]; then
 	who_file="$CKAN_CONF_TEMPLATES/who.ini"
 	echo "---> Using the supplied $who_file"
 else
-	echo "---> Using the default $who_file"
+	echo "---> Using the DEFAULT wilson $who_file"
 fi
 cp -f "$who_file" "$CKAN_CONFIG/who.ini"
 

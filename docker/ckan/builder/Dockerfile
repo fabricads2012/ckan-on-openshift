@@ -28,6 +28,10 @@ RUN git clone "https://github.com/ogdch/ckanext-noregistration.git"
 
 RUN git clone "https://github.com/fabricads2012/ckanext-tema.git"
 
+RUN git clone "https://github.com/fabricads2012/ckanext-autorizacoes.git"
+
+RUN git clone "https://github.com/fabricads2012/ckanext-formulario.git"
+
 
 
 # using base container env vars

@@ -43,10 +43,7 @@ RUN mv -f $APP_ROOT/config/app.sh $APP_ROOT/src/app.sh && \
 #RUN cd $APP_ROOT/src/ckanext-noregistration && \
 #    python setup.py install
 
-RUN source $APP_ROOT/src/ckanext-noregistration && \
-# need to enable alternate packages
-        cd $APP_ROOT/src/ckanext-noregistration && \
-	python setup.py install
+
 
 USER 1001
 

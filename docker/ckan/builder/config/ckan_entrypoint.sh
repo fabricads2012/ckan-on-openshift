@@ -120,6 +120,7 @@ if [ -n "$CKAN_DO_DB_INIT" ] && [ "$CKAN_DO_DB_INIT" = "true" ]; then
 	echo "=======================END sql=============================="
 fi
 
+source $APP_ROOT/src/ckanext-noregistration && 
 cd $APP_ROOT/src/ckanext-noregistration
 python setup.py install
 

@@ -44,6 +44,29 @@ python setup.py install
 
 echo "Install finished"
 
+
+echo "CHANGE FOR CKAN-AUTORIZAÇÕES"
+cd $APP_ROOT/src/ckanext-autorizacoes
+
+echo "INSTALL CKA-AUTORIZAÇÕES"
+python setup.py install
+
+echo "CHANGE FOR CKAN-FORMULARIO"
+cd $APP_ROOT/src/ckanext-formulario
+
+echo "INSTALL CKAN-FORMULARIO"
+python setup.py install
+
+echo "CHANGE FOR CKAN-TEMA"
+cd $APP_ROOT/src/ckanext-tema
+
+echo "INSTALL CKAN-TEMA"
+python setup.py install
+
+echo "Install finished"
+
+
+
 who_file="$APP_ROOT/src/ckan/ckan/config/who.ini"
 if [ -s "$CKAN_CONF_TEMPLATES/who.ini" ]; then
 	who_file="$CKAN_CONF_TEMPLATES/who.ini"

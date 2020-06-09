@@ -120,10 +120,16 @@ if [ -n "$CKAN_DO_DB_INIT" ] && [ "$CKAN_DO_DB_INIT" = "true" ]; then
 	echo "=======================END sql=============================="
 fi
 
+echo " Source "
+source $APP_ROOT/etc/scl_enable
 
-source $APP_ROOT/src/ckanext-noregistration 
+echo " change dir"
 cd $APP_ROOT/src/ckanext-noregistration
+
+echo " Install"
 python setup.py install
+
+echo "Install finished"
 
 echo "---> CKAN will be started with the configuration below:"
 cat "$CONFIG"

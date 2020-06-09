@@ -33,6 +33,16 @@ if [ ! -s "$CKAN_CONF_TEMPLATES/ckan.ini" ]; then
 	echo "$CKAN_CONF_TEMPLATES/ckan.ini not found; Exiting" >&2
 	exit 1
 fi
+echo " Source "
+source $APP_ROOT/etc/scl_enable
+
+echo " change dir"
+cd $APP_ROOT/src/ckanext-noregistration
+
+echo " Install"
+python setup.py install
+
+echo "Install finished"
 
 who_file="$APP_ROOT/src/ckan/ckan/config/who.ini"
 if [ -s "$CKAN_CONF_TEMPLATES/who.ini" ]; then
@@ -120,16 +130,7 @@ if [ -n "$CKAN_DO_DB_INIT" ] && [ "$CKAN_DO_DB_INIT" = "true" ]; then
 	echo "=======================END sql=============================="
 fi
 
-echo " Source "
-source $APP_ROOT/etc/scl_enable
 
-echo " change dir"
-cd $APP_ROOT/src/ckanext-noregistration
-
-echo " Install"
-python setup.py install
-
-echo "Install finished"
 
 echo "---> CKAN will be started with the configuration below:"
 cat "$CONFIG"

@@ -47,7 +47,6 @@ RUN source $APP_ROOT/src/ckanext-noregistration && \
 # need to enable alternate packages
         cd ckanext-noregistration && \
 	python setup.py install
-	fix-permissions ${APP_ROOT}
 
 USER 1001
 

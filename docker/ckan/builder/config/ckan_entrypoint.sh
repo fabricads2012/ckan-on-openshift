@@ -36,6 +36,19 @@ fi
 echo " Source "
 source $APP_ROOT/etc/scl_enable
 
+echo " INSTALL VIA PIP"
+
+cd cd $APP_ROOT/src/
+
+echo "INSTALL" 
+pip install -e git+http://github.com/okfn/ckanext-archiver.git#egg=ckanext-archiver
+
+echo "INSTALL LIB"
+pip install -r pip-requirements.txt
+
+
+echo "INSTALLED"
+
 echo " change dir"
 cd $APP_ROOT/src/ckanext-noregistration
 
@@ -46,6 +59,8 @@ echo "Install finished"
 
 echo " Source "
 source $APP_ROOT/etc/scl_enable
+
+
 
 echo "CHANGE FOR CKAN-FORMULARIO"
 cd $APP_ROOT/src/ckanext-formulario

@@ -24,7 +24,7 @@ RUN INSTALL_PKGS="libxml2-devel libxslt-devel openssl-devel libffi-devel git" &&
 	rpm -V geos-devel && \
 	yum -y clean all --enablerepo='*'
 	
-RUN git clone "https://github.com/ogdch/ckanext-noregistration.git" 
+#RUN git clone "https://github.com/ogdch/ckanext-noregistration.git" 
 
 #RUN git clone "https://github.com/fabricads2012/ckanext-tema.git"
 

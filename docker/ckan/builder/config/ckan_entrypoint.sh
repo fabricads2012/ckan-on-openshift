@@ -39,11 +39,7 @@ source $APP_ROOT/etc/scl_enable
 echo " INSTALL VIA PIP"
 
 echo "INSTALL" 
-pip install -e git+http://github.com/okfn/ckanext-archiver.git#egg=ckanext-archiver
-
-echo "INSTALL LIB"
-pip install -r pip-requirements.txt
-
+pip install -e git+https://github.com/openresearchdata/ckanext-ord-hierarchy.git#egg=ckanext-ord-hierarchy
 
 echo "INSTALLED"
 

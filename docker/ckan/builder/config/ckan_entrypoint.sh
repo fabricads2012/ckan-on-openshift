@@ -43,6 +43,14 @@ pip install -e git+https://github.com/openresearchdata/ckanext-ord-hierarchy.git
 
 echo "INSTALLED"
 
+pip install -e  git+https://github.com/ckan/ckanext-apihelper.git#egg=ckanext-apihelper
+
+echo "INSTALLED"
+
+pip install -e git+https://github.com/fabricads2012/ckanext-tema.git#egg=ckanext-tema
+
+echo "INSTALLED"
+
 echo " change dir"
 cd $APP_ROOT/src/ckanext-noregistration
 

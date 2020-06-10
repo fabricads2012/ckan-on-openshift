@@ -38,8 +38,6 @@ source $APP_ROOT/etc/scl_enable
 
 echo " INSTALL VIA PIP"
 
-cd cd $APP_ROOT/src/
-
 echo "INSTALL" 
 pip install -e git+http://github.com/okfn/ckanext-archiver.git#egg=ckanext-archiver
 

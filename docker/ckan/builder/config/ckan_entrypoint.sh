@@ -44,6 +44,16 @@ python setup.py install
 
 echo "Install finished"
 
+echo " Source "
+source $APP_ROOT/etc/scl_enable
+
+echo "CHANGE FOR CKAN-FORMULARIO"
+cd $APP_ROOT/src/ckanext-formulario
+
+echo "INSTALL CKAN-FORMULARIO"
+python setup.py install
+
+echo "Install finished"
 
 
 who_file="$APP_ROOT/src/ckan/ckan/config/who.ini"

@@ -38,12 +38,8 @@ source $APP_ROOT/etc/scl_enable
 
 echo " INSTALL VIA PIP"
 
-echo "INSTALL" 
-pip install -e git+https://github.com/openresearchdata/ckanext-ord-hierarchy.git#egg=ckanext-ord-hierarchy
 
-echo "INSTALLED"
-
-pip install -e  git+https://github.com/ckan/ckanext-apihelper.git#egg=ckanext-apihelper
+pip install -e  git+https://github.com/fabricads2012/ckanext-autorizacoes.git#egg=ckanext-autorizacoes
 
 echo "INSTALLED"
 
@@ -51,32 +47,9 @@ pip install -e git+https://github.com/fabricads2012/ckanext-tema.git#egg=ckanext
 
 echo "INSTALLED"
 
-echo " change dir"
-cd $APP_ROOT/src/ckanext-noregistration
-
-echo " Install"
-python setup.py install 
-
-echo "Install finished"
-
-echo " Source "
-source $APP_ROOT/etc/scl_enable
+pip install -e git+https://github.com/fabricads2012/ckanext-formulario.git#egg=ckanext-formulario
 
 
-
-echo "CHANGE FOR CKAN-FORMULARIO"
-cd $APP_ROOT/src/ckanext-formulario
-
-echo "INSTALL CKAN-FORMULARIO"
-python setup.py install
-
-echo "Install finished"
-
-echo "CHANGE FOR CKAN-APIHELPER"
-cd $APP_ROOT/src/ckanext-apihelper
-
-echo "INSTALL CKAN-API-HELPER"
-python setup.py install
 
 echo "Install finished"
 

@@ -28,6 +28,9 @@ RUN INSTALL_PKGS="libxml2-devel libxslt-devel openssl-devel libffi-devel git" &&
 
 RUN git clone "https://github.com/fabricads2012/ckanext-tema.git"
 
+RUN git clone "https://github.com/ckan/ckanext-mapviews.git"
+
+
 #RUN git clone "https://github.com/fabricads2012/ckanext-autorizacoes.git"
 
 #RUN git clone "https://github.com/fabricads2012/ckanext-formulario.git"

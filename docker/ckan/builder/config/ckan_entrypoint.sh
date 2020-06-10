@@ -36,27 +36,6 @@ fi
 echo " Source "
 source $APP_ROOT/etc/scl_enable
 
-echo " change dir"
-cd $APP_ROOT/src/ckanext-noregistration
-
-echo " Install"
-python setup.py install
-
-echo "Install finished"
-
-
-echo "CHANGE FOR CKAN-AUTORIZAÇÕES"
-cd $APP_ROOT/src/ckanext-autorizacoes
-
-echo "INSTALL CKA-AUTORIZAÇÕES"
-python setup.py install
-
-echo "CHANGE FOR CKAN-FORMULARIO"
-cd $APP_ROOT/src/ckanext-formulario
-
-echo "INSTALL CKAN-FORMULARIO"
-python setup.py install
-
 echo "CHANGE FOR CKAN-TEMA"
 cd $APP_ROOT/src/ckanext-tema
 

@@ -42,6 +42,12 @@ cd $APP_ROOT/src/ckanext-tema
 echo "INSTALL CKAN-TEMA"
 python setup.py install
 
+echo "CHANGE FOR CKAN-MAPVIEWS"
+cd $APP_ROOT/src/ckanext-mapviews
+
+echo "INSTALL CKAN-MAP"
+python setup.py install develop
+
 echo "Install finished"
 
 

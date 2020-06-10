@@ -36,16 +36,10 @@ fi
 echo " Source "
 source $APP_ROOT/etc/scl_enable
 
-echo "CHANGE FOR CKAN-TEMA"
-cd $APP_ROOT/src/ckanext-tema
+echo " change dir"
+cd $APP_ROOT/src/ckanext-noregistration
 
-echo "INSTALL CKAN-TEMA"
-python setup.py install
-
-echo "CHANGE FOR CKAN-MAPVIEWS"
-cd $APP_ROOT/src/ckanext-mapviews
-
-echo "INSTALL CKAN-MAP"
+echo " Install"
 python setup.py install 
 
 echo "Install finished"

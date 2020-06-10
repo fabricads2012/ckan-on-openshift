@@ -55,6 +55,15 @@ python setup.py install
 
 echo "Install finished"
 
+echo "CHANGE FOR CKAN-APIHELPER"
+cd $APP_ROOT/src/ckanext-apihelper
+
+echo "INSTALL CKAN-API-HELPER"
+python setup.py install
+
+echo "Install finished"
+
+
 
 who_file="$APP_ROOT/src/ckan/ckan/config/who.ini"
 if [ -s "$CKAN_CONF_TEMPLATES/who.ini" ]; then

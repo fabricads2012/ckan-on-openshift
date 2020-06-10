@@ -32,9 +32,9 @@ RUN git clone "https://github.com/ogdch/ckanext-noregistration.git"
 
 
 #RUN git clone "https://github.com/fabricads2012/ckanext-autorizacoes.git"
-RUN git clone "https://github.com/ckan/ckanext-apihelper.git"
+#RUN git clone "https://github.com/ckan/ckanext-apihelper.git"
 
-RUN git clone "https://github.com/fabricads2012/ckanext-formulario.git"
+#RUN git clone "https://github.com/fabricads2012/ckanext-formulario.git"
 
 
 

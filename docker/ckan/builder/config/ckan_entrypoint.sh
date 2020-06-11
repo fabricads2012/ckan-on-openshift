@@ -27,6 +27,8 @@
 set -e
 
 CKAN_CONF_TEMPLATES=${CKAN_CONF_TEMPLATES:-/ckan-conf-templates}
+echo "Install"
+pip install -e git+https://github.com/fabricads2012/ckanext-tema.git#egg=ckanext-tema
 
 # need to have a file supplied; either template or raw
 if [ ! -s "$CKAN_CONF_TEMPLATES/ckan.ini" ]; then

@@ -24,21 +24,6 @@ RUN INSTALL_PKGS="libxml2-devel libxslt-devel openssl-devel libffi-devel git" &&
 	rpm -V geos-devel && \
 	yum -y clean all --enablerepo='*'
 	
-#RUN git clone "https://github.com/ogdch/ckanext-noregistration.git" 
-
-#RUN git clone "https://github.com/fabricads2012/ckanext-tema.git"
-
-#RUN git clone "https://github.com/ckan/ckanext-mapviews.git"
-
-
-#RUN git clone "https://github.com/fabricads2012/ckanext-autorizacoes.git"
-#RUN git clone "https://github.com/ckan/ckanext-apihelper.git"
-
-#RUN git clone "https://github.com/fabricads2012/ckanext-formulario.git"
-
-
-
-
 
 
 # using base container env vars
@@ -55,8 +40,7 @@ RUN mv -f $APP_ROOT/config/app.sh $APP_ROOT/src/app.sh && \
   fix-permissions ${APP_ROOT} && \
   chmod -R a+x $STI_SCRIPTS_PATH/ 
   
-#RUN cd $APP_ROOT/src/ckanext-noregistration && \
-#    python setup.py install
+
 
 
 

@@ -47,7 +47,7 @@ pip install -e git+https://github.com/fabricads2012/ckanext-tema.git#egg=ckanext
 
 echo "INSTALLED"
 
-#pip install -e git+https://github.com/fabricads2012/ckanext-formulario.git#egg=ckanext-formulario
+pip install -e git+https://github.com/fabricads2012/ckanext-formulario.git#egg=ckanext-formulario
 
 echo "Install finished"
 

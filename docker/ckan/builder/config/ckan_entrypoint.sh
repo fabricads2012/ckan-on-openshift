@@ -36,20 +36,20 @@ fi
 echo " Source "
 source $APP_ROOT/etc/scl_enable
 
-echo " INSTALL VIA PIP"
+#echo " INSTALL VIA PIP"
 
 
-pip install -e  git+https://github.com/fabricads2012/ckanext-autorizacoes.git#egg=ckanext-autorizacoes
+#pip install -e  git+https://github.com/fabricads2012/ckanext-autorizacoes.git#egg=ckanext-autorizacoes
 
-echo "INSTALLED"
+#echo "INSTALLED"
 
-pip install -e git+https://github.com/fabricads2012/ckanext-tema.git#egg=ckanext-tema
+#pip install -e git+https://github.com/fabricads2012/ckanext-tema.git#egg=ckanext-tema
 
-echo "INSTALLED"
+#echo "INSTALLED"
 
-pip install -e git+https://github.com/fabricads2012/ckanext-formulario.git#egg=ckanext-formulario
+#pip install -e git+https://github.com/fabricads2012/ckanext-formulario.git#egg=ckanext-formulario
 
-echo "Install finished"
+#echo "Install finished"
 
 
 

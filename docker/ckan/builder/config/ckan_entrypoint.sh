@@ -43,9 +43,9 @@ pip install -e  git+https://github.com/fabricads2012/ckanext-autorizacoes.git#eg
 
 echo "INSTALLED"
 
-pip install -e git+https://github.com/fabricads2012/ckanext-tema.git#egg=ckanext-tema
+#pip install -e git+https://github.com/fabricads2012/ckanext-tema.git#egg=ckanext-tema
 
-echo "INSTALLED"
+#echo "INSTALLED"
 
 pip install -e git+https://github.com/fabricads2012/ckanext-formulario.git#egg=ckanext-formulario
 

@@ -33,8 +33,8 @@ if [ ! -s "$CKAN_CONF_TEMPLATES/ckan.ini" ]; then
 	echo "$CKAN_CONF_TEMPLATES/ckan.ini not found; Exiting" >&2
 	exit 1
 fi
-echo " Source "
-source $APP_ROOT/etc/scl_enable
+#echo " Source "
+#source $APP_ROOT/etc/scl_enable
 
 #echo " INSTALL VIA PIP"
 

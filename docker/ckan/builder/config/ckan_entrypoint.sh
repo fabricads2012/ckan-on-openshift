@@ -51,16 +51,6 @@ fi
 
 #echo "Install finished"
 
-cd $APP_ROOT/src/ckan
-echo "$(ls)"
-echo "Exit ls"
-cd $APP_ROOT/src/ckan/ckan
-echo "$(ls)"
-echo "Exit ls"
-cd $APP_ROOT/src/ckan/ckan/config
-echo "$(ls)"
-echo "Exit ls"
-
 who_file="$APP_ROOT/src/ckan/ckan/config/who.ini"
 if [ -s "$CKAN_CONF_TEMPLATES/who.ini" ]; then
 	who_file="$CKAN_CONF_TEMPLATES/who.ini"

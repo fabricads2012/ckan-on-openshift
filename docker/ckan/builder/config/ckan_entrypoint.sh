@@ -33,23 +33,7 @@ if [ ! -s "$CKAN_CONF_TEMPLATES/ckan.ini" ]; then
 	echo "$CKAN_CONF_TEMPLATES/ckan.ini not found; Exiting" >&2
 	exit 1
 fi
-#echo " Source "
-#source $APP_ROOT/etc/scl_enable
 
-#echo " INSTALL VIA PIP"
-
-
-#pip install -e  git+https://github.com/fabricads2012/ckanext-autorizacoes.git#egg=ckanext-autorizacoes
-
-#echo "INSTALLED"
-
-#pip install -e git+https://github.com/fabricads2012/ckanext-tema.git#egg=ckanext-tema
-
-#echo "INSTALLED"
-
-#pip install -e git+https://github.com/fabricads2012/ckanext-formulario.git#egg=ckanext-formulario
-
-#echo "Install finished"
 
 who_file="$APP_ROOT/src/ckan/ckan/config/who.ini"
 if [ -s "$CKAN_CONF_TEMPLATES/who.ini" ]; then
